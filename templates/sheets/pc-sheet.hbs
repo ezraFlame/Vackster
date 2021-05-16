@@ -1,0 +1,13 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <div class="actor-info">
+        <h1>
+            <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" width="64" height="64" />
+            <span id="actor-name">{{actor.name}}</span>
+        </h1>
+    </div>
+    <div class="body">
+        {{> "systems/Vackster/templates/partials/character-stat-block.hbs"}}
+        <div class="actions"></div>
+        {{> "systems/Vackster/templates/partials/item-card.hbs"}}
+    </div>
+</form>

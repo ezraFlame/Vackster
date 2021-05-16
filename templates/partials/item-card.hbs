@@ -1,0 +1,11 @@
+<div class="inventory">
+    {{#each items as |item id|}}
+    <div class="item" data-item-id="{{_id}}">
+        <input class="name inline-edit" type="text" data-field="name" value="{{name}}" />
+        <input class="weight inline-edit" type="text" data-field="data.weight" value="{{data.weight}}" />
+        <a class="item-delete">
+            <i class="fas fa-trash"></i>
+        </a>
+    </div>
+    {{/each}}
+</div>

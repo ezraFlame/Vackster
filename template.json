@@ -1,0 +1,114 @@
+{
+    "Actor":{
+        "types": [
+            "enemy",
+            "specialNpc",
+            "pc"
+        ],
+        "templates": {
+            "default": {
+                "abilities": {
+                    "str": {
+                        "dnum": 1,
+                        "dtype": 4,
+                        "mod": 0
+                    },
+                    "dex": {
+                        "dnum": 1,
+                        "dtype": 4,
+                        "mod": 0
+                    },
+                    "int": {
+                        "dnum": 1,
+                        "dtype": 4,
+                        "mod": 0
+                    },
+                    "wis": {
+                        "dnum": 1,
+                        "dtype": 4,
+                        "mod": 0
+                    },
+                    "con": {
+                        "dnum": 1,
+                        "dtype": 4,
+                        "mod": 0
+                    },
+                    "soul": {
+                        "dnum": 1,
+                        "dtype": 4,
+                        "mod": 0
+                    }
+                },
+                "stats": {
+                    "hp": {
+                        "max": 1,
+                        "value": 1
+                    },
+                    "me": {
+                        "max": 1,
+                        "value": 1
+                    }
+                }
+            },
+            "specialCharacter": {
+                "soulTrait": {
+                    "name": "",
+                    "description": ""
+                }
+            }
+        },
+        "enemy": {
+            "templates": [
+                "default"
+            ]
+        },
+        "specialNpc": {
+            "templates": [
+                "default",
+                "specialCharacter"
+            ]
+        },
+        "pc": {
+            "templates": [
+                "default",
+                "specialCharacter"
+            ]
+        }
+    },
+    "Item":{
+        "types": [
+            "weapon",
+            "consumable",
+            "action"
+        ],
+        "templates": {
+            "common": {
+                "description": "",
+                "weight": "1"
+            }
+        },
+        "weapon": {
+            "templates": [
+                "common"
+            ],
+            "damage": 0,
+            "useTime": 1,
+            "attackStat": "str"
+        },
+        "consumable": {
+            "templates": [
+                "common"
+            ],
+            "effect": "healing",
+            "range": 0,
+            "type": "self",
+            "amount": 1,
+            "useTime": 1
+        },
+        "action": {
+            "type": [
+                "damage"
+            ]
+        }
+    }
+}

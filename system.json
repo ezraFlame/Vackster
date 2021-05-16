@@ -1,0 +1,21 @@
+{
+    "name": "Vackster",
+    "title": "Vackster",
+    "description": "Custom game system for VacksterRPG",
+    "version": 0.01,
+    "minimumCoreVersion": "0.7.9",
+    "compatibleCoreVersion": "0.7.9",
+    "esmodules": [
+        "vackster.js"
+    ],
+    "styles": [
+        "less/vackster.css"
+    ],
+    "packs": [
+
+    ],
+    "languages": [
+
+    ],
+    "primaryTokenAttribute": "HP"
+}
