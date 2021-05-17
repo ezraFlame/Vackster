@@ -22,6 +22,8 @@ export default class VacksterItemSheet extends ItemSheet {
 
         data.config = CONFIG.Vackster;
 
+        data.actions = this.item.actions;
+
         return data;
     }
 
@@ -41,12 +43,18 @@ export default class VacksterItemSheet extends ItemSheet {
 
         let item = await Item.fromDropData(data);
 
-        let itemData = duplicate(item.data);
-
-        return this._addAction(itemData);
+        return this._addAction(item);
     }
 
-    async _addAction(itemData) {
-        return this.item.createEmbeddedEntity("Actions", itemData);
+    async _addAction(item) {
+        let data = {
+            data: {
+                type: item.data.data.type
+            },
+            _id: item.data._id,
+            name: item.data.name
+        }
+        console.log(this.item.data.data);
+        return this.item.data.data.actions.push(data);
     }
 }
