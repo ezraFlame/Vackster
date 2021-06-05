@@ -9,7 +9,14 @@ export default class VacksterPcSheet extends ActorSheet {
     getData() {
         const data = super.getData();
         data.config = CONFIG.Vackster;
-        data.weapons = data.items.filter(function (item) { return item.type == "weapon"; })
+        data.weapons = data.items.filter(function (item) { return item.type == "weapon"; });
+        data.actions = data.items.filter(function (item) { return item.type == "action"; });
+
+        data.weapons.forEach(weapon => {
+            data.data.actions.forEach(action => {
+                data.actions.push(action);
+            });
+        });
         
         return data;
     }
@@ -30,6 +37,8 @@ export default class VacksterPcSheet extends ActorSheet {
             name: "newItem",
             type: element.dataset.type
         };
+
+        console.log(this.getData().actions);
 
         return this.actor.createOwnedItem(itemData);
     }

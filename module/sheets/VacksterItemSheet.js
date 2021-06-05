@@ -14,7 +14,20 @@ export default class VacksterItemSheet extends ItemSheet {
         if (this.item.type != "action") {
             this.dragDrop.bind(html.find(".actions").get(0));
         }
+
+        html.find(".item-delete").click(this._onItemDelete.bind(this));
+
         super.activateListeners(html);
+    }
+
+    _onItemDelete(event) {
+        event.preventDefault();
+        let element = event.currentTarget;
+        let itemId = element.closest(".item").dataset.itemId;
+        let itemIndex = this.item.data.data.actions.findIndex(function (element) { return element._id == itemId; });
+        let data = duplicate(this.item.data);
+        data.data.actions.splice(itemIndex, 1);
+        this.item.update(data);
     }
 
     getData() {
@@ -39,6 +52,7 @@ export default class VacksterItemSheet extends ItemSheet {
     }
 
     async _onDrop(event) {
+        super._onDrop(event);
         let data = JSON.parse(event.dataTransfer.getData('text/plain'));
 
         let item = await Item.fromDropData(data);
@@ -47,14 +61,9 @@ export default class VacksterItemSheet extends ItemSheet {
     }
 
     async _addAction(item) {
-        let data = {
-            data: {
-                type: item.data.data.type
-            },
-            _id: item.data._id,
-            name: item.data.name
-        }
-        console.log(this.item.data.data);
-        return this.item.data.data.actions.push(data);
+        let itemData = duplicate(this.item.data);
+        itemData.data.actions.push(item);
+        console.log(this.item);
+        return this.item.update(itemData);
     }
 }

@@ -94,15 +94,7 @@
             "damage": 0,
             "useTime": 1,
             "attackStat": "str",
-            "actions": [
-                {
-                    "data": {
-                        "type": "damage"
-                    },
-                    "_id": "",
-                    "name": ""
-                }
-            ]
+            "actions": []
         },
         "consumable": {
             "templates": [
@@ -115,9 +107,7 @@
             "useTime": 1
         },
         "action": {
-            "type": [
-                "damage"
-            ]
+            "type": "damage"
         }
     }
 }

@@ -31,7 +31,10 @@
         <div class="actions">
             <h2>Actions</h2>
             {{#each data.actions}}
-            <p>heck</p>
+            <div class="item" data-item-id="{{this._id}}">
+                <p>{{this.name}} | {{this.data.type}}</p>
+                <a class="item-delete"><i class="fas fa-trash"></i></a>
+            </div>
             {{/each}}
         </div>
     </div>
