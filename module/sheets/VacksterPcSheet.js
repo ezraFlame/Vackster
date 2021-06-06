@@ -10,13 +10,8 @@ export default class VacksterPcSheet extends ActorSheet {
         const data = super.getData();
         data.config = CONFIG.Vackster;
         data.weapons = data.items.filter(function (item) { return item.type == "weapon"; });
-        data.actions = data.items.filter(function (item) { return item.type == "action"; });
-
-        data.weapons.forEach(weapon => {
-            data.data.actions.forEach(action => {
-                data.actions.push(action);
-            });
-        });
+        data.skills = data.items.filter(function (item) { return item.type == "skill"; });
+        data.items = data.items.filter(function (item) { return !CONFIG.Vackster.inventoryBlacklist.includes(item.type); });
         
         return data;
     }

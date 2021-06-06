@@ -3,12 +3,6 @@
   flex-direction: column;
   width: 30%;
 }
-.stat-block .stat-value .stat-dnum {
-  width: 40px;
-}
-.stat-block .stat-value .stat-dtype {
-  width: 40px;
-}
-.stat-block .stat-value .stat-mod {
+.stat-block .stat-value {
   width: 40px;
 }

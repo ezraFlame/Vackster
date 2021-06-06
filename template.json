@@ -8,36 +8,12 @@
         "templates": {
             "default": {
                 "abilities": {
-                    "str": {
-                        "dnum": 1,
-                        "dtype": 4,
-                        "mod": 0
-                    },
-                    "dex": {
-                        "dnum": 1,
-                        "dtype": 4,
-                        "mod": 0
-                    },
-                    "int": {
-                        "dnum": 1,
-                        "dtype": 4,
-                        "mod": 0
-                    },
-                    "wis": {
-                        "dnum": 1,
-                        "dtype": 4,
-                        "mod": 0
-                    },
-                    "con": {
-                        "dnum": 1,
-                        "dtype": 4,
-                        "mod": 0
-                    },
-                    "soul": {
-                        "dnum": 1,
-                        "dtype": 4,
-                        "mod": 0
-                    }
+                    "str": 0,
+                    "dex": 0,
+                    "int": 0,
+                    "wis": 0,
+                    "con": 0,
+                    "soul": 0
                 },
                 "stats": {
                     "hp": {
@@ -79,7 +55,8 @@
         "types": [
             "weapon",
             "consumable",
-            "action"
+            "action",
+            "skill"
         ],
         "templates": {
             "common": {
@@ -108,6 +85,11 @@
         },
         "action": {
             "type": "damage"
+        },
+        "skill": {
+            "dtype": "1",
+            "dnum": "4",
+            "stat": "str"
         }
     }
 }

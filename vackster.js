@@ -6,7 +6,8 @@ import VacksterPcSheet from "./module/sheets/VacksterPcSheet.js";
 async function preloadHandlebarsTemplates() {
     const templatePaths = [
         "systems/Vackster/templates/partials/character-stat-block.hbs",
-        "systems/Vackster/templates/partials/item-card.hbs"
+        "systems/Vackster/templates/partials/item-card.hbs",
+        "systems/Vackster/templates/partials/character-skill-block.hbs"
     ];
     return loadTemplates(templatePaths);
 }

@@ -1,6 +1,6 @@
 export const Vackster = {};
 
-Vackster.attackTypes = {
+Vackster.stats = {
     none: "",
     str: "STR",
     dex: "DEX",
@@ -9,3 +9,5 @@ Vackster.attackTypes = {
     con: "CON",
     soul: "SOUL"
 }
+
+Vackster.inventoryBlacklist = [ "skill" ];

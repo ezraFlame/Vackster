@@ -1,21 +1,16 @@
 .vackster.sheet.pc .body {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
-.vackster.sheet.pc .body .actions {
-  width: 50%;
+.vackster.sheet.pc .body .row {
+  display: flex;
+  flex-direction: row;
 }
 .vackster.sheet.pc .body .stat-block {
   display: flex;
   flex-direction: column;
   width: 30%;
 }
-.vackster.sheet.pc .body .stat-block .stat-value .stat-dnum {
-  width: 40px;
-}
-.vackster.sheet.pc .body .stat-block .stat-value .stat-dtype {
-  width: 40px;
-}
-.vackster.sheet.pc .body .stat-block .stat-value .stat-mod {
+.vackster.sheet.pc .body .stat-block .stat-value {
   width: 40px;
 }

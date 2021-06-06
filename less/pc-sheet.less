@@ -1,56 +1,10 @@
-// .sheet {
-//     form {
-//         .inline-flex {
-//             display: inline-flex;
-//             width: fit-content;
-//             margin: 3px;
-//         }
-//         .float-right {
-//             float: right;
-//         }
-//         .body {
-//             display: flex;
-//             flex-direction: row;
-//             .stats {
-//                 width: 25%;
-//                 display: flex;
-//                 flex-direction: column;
-//                 .stat-value {
-//                     .stat-dnum {
-//                         width: 50px;
-//                     }
-    
-//                     .stat-dtype {
-//                         width: 50px;
-//                     }
-    
-//                     .stat-mod {
-//                         width: 50px;
-//                     }
-//                 }
-//                 .item-delete {
-//                     width: 100%;
-//                     text-align: right;
-//                 }
-//             }
-//             .weapon-list {
-//                 height: 50%;
-//                 width: 25%;
-//                 display: flex;
-//                 flex-direction: column;
-//                 justify-content: right;
-//                 height: fit-content;
-//             }
-//         }
-//     }
-// }
-
 .vackster.sheet.pc {
     .body {
         display: flex;
-        flex-direction: row;
-        .actions {
-            width: 50%;
+        flex-direction: column;
+        .row {
+            display: flex;
+            flex-direction: row;
         }
         @import "./character-stat-block.less";
     }
