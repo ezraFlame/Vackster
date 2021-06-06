@@ -1,0 +1,18 @@
+@stat-width: 60px;
+
+.stat-block {
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    padding-bottom: 10px;
+
+    h3 {
+        display: inline-block;
+        width: 50px;
+        font-weight: bold;
+    }
+    .stat-value {
+        display: inline;
+        width: @stat-width;
+    }
+}

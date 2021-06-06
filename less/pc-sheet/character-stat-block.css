@@ -1,0 +1,15 @@
+.stat-block {
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  padding-bottom: 10px;
+}
+.stat-block h3 {
+  display: inline-block;
+  width: 50px;
+  font-weight: bold;
+}
+.stat-block .stat-value {
+  display: inline;
+  width: 60px;
+}

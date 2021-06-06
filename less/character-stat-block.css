@@ -1,8 +1,0 @@
-.stat-block {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-}
-.stat-block .stat-value {
-  width: 40px;
-}

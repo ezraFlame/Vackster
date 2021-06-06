@@ -1,12 +1,3 @@
-.sheet form {
-  display: flex;
-  flex-direction: column;
-}
-.sheet .sheet-content {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
 .vackster.sheet.pc .body {
   display: flex;
   flex-direction: column;
@@ -32,6 +23,7 @@
 }
 .vackster.sheet.pc .body .skills {
   padding-right: 5px;
+  border-right: 1px solid black;
 }
 .vackster.sheet.pc .body .skills .skill {
   display: flex;
@@ -44,10 +36,4 @@
 }
 .vackster.sheet.pc .body .skills .skill .stat {
   width: 60px;
-}
-.vackster.sheet.pc .body .inventory {
-  padding-left: 5px;
-}
-.stat {
-  width: 40px;
 }

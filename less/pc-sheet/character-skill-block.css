@@ -1,0 +1,15 @@
+.skills {
+  padding-right: 5px;
+}
+.skills .skill {
+  display: flex;
+  flex-direction: row;
+}
+.skills .skill h3 {
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: bold;
+}
+.skills .skill .stat {
+  width: 60px;
+}
