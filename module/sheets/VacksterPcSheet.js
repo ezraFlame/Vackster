@@ -20,6 +20,7 @@ export default class VacksterPcSheet extends ActorSheet {
         html.find(".item-create").click(this._onItemCreate.bind(this));
         html.find(".inline-edit").change(this._onWeaponEdit.bind(this));
         html.find(".item-delete").click(this._onItemDelete.bind(this));
+        html.find(".skill-edit").click(this._onSkillEdit.bind(this));
 
         super.activateListeners(html);
     }
@@ -53,5 +54,14 @@ export default class VacksterPcSheet extends ActorSheet {
         let field = element.dataset.field;
 
         return item.update({ [field]: element.value });
+    }
+
+    _onSkillEdit(event) {
+        event.preventDefault();
+        let element = event.currentTarget;
+        let itemId = element.closest(".item").dataset.itemId;
+        let item = this.actor.getOwnedItem(itemId);
+
+        item.sheet.render(true);
     }
 }

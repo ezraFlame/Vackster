@@ -18,12 +18,11 @@
   font-weight: bold;
 }
 .vackster.sheet.pc .body .stat-block .stat-value {
-  display: inline;
+  display: inline-block;
   width: 60px;
 }
 .vackster.sheet.pc .body .skills {
   padding-right: 5px;
-  border-right: 1px solid black;
 }
 .vackster.sheet.pc .body .skills .skill {
   display: flex;
@@ -34,6 +33,6 @@
   padding-right: 5px;
   font-weight: bold;
 }
-.vackster.sheet.pc .body .skills .skill .stat {
-  width: 60px;
+.vackster.sheet.pc .body .inventory {
+  padding-left: 5px;
 }

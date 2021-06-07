@@ -89,7 +89,14 @@
         "skill": {
             "dtype": "1",
             "dnum": "4",
-            "stat": "str"
+            "modifiers": {
+                "str": true,
+                "dex": false,
+                "int": false,
+                "wis": false,
+                "con": false,
+                "soul": false
+            }
         }
     }
 }

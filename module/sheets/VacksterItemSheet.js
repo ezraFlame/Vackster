@@ -3,6 +3,12 @@ export default class VacksterItemSheet extends ItemSheet {
         return `systems/Vackster/templates/sheets/${this.item.data.type}-sheet.hbs`;
     }
 
+    static get defaultOptions() {
+        return mergeObject(super.defaultOptions, {
+            classes: ["vackster", "sheet", "item"]
+        });
+    }
+
     dragDrop = new DragDrop({
         dragSelector: ".item",
         dropSelector: null,

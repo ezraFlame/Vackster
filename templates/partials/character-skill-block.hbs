@@ -1,11 +1,23 @@
 <section class="skills">
-    {{#each skills as |skill id|}}
+    {{!-- {{#each skills as |skill id|}}
     <div class="skill item" data-item-id="{{_id}}">
         <input class="name inline-edit" type="text" data-field="name" value="{{name}}" />
         <input class="dnum stat inline-edit" type="text" data-field="data.dnum" value="{{data.dnum}}" /><h3>d</h3>
         <input class="dtype stat inline-edit" type="text" data-field="data.dtype" value="{{data.dtype}}" />
         <a class="item-delete">
             <i class="fas fa-trash"></i>
+        </a>
+    </div>
+    {{/each}} --}}
+    {{#each skills as |skill id|}}
+    <div class="skill item" data-item-id="{{_id}}">
+        <h3 class="name">{{name}}</h3>
+        <h3 class="value">{{data.dnum}}d{{data.dtype}}</h3>
+        <a class="item-delete">
+            <i class="fas fa-trash"></i>
+        </a>
+        <a class="skill-edit">
+            <i class="fas fa-edit"></i>
         </a>
     </div>
     {{/each}}

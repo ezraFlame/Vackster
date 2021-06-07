@@ -4,8 +4,12 @@
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
     </header>
     <div class="sheet-content">
-        <div>
-            <input class="stat" name="data.dnum" value="{{data.dnum}}" />d<input class="stat" name="data.dtype" value="{{data.dtpye}}" />
-        </div>
+        <input class="stat" name="data.dnum" value="{{data.dnum}}" />d<input class="stat" name="data.dtype" value="{{data.dtype}}" />
+        <span><label for="str">STR</label><input type="checkbox" name="data.modifiers.dex" id="str" {{checked data.modifiers.dex}} /></span>
+        <span><label for="dex">DEX</label> <input type="checkbox" name="data.modifiers.str" id="dex" {{checked data.modifiers.str}} /></span>
+        <span><label for="int">INT</label> <input type="checkbox" name="data.modifiers.int" id="int" {{checked data.modifiers.int}} /></span>
+        <span><label for="wis">WIS</label> <input type="checkbox" name="data.modifiers.wis" id="wis" {{checked data.modifiers.wis}} /></span>
+        <span><label for="con">CON</label> <input type="checkbox" name="data.modifiers.con" id="con" {{checked data.modifiers.con}} /></span>
+        <span><label for="soul">SOUL</label> <input type="checkbox" name="data.modifiers.soul" id="soul" {{checked data.modifiers.soul}} /></span>
     </div>
 </form>

@@ -10,6 +10,6 @@
   font-weight: bold;
 }
 .stat-block .stat-value {
-  display: inline;
+  display: inline-block;
   width: 60px;
 }
