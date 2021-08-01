@@ -84,19 +84,26 @@
             "useTime": 1
         },
         "action": {
-            "type": "damage"
+            "type": "damage",
+            "types": [
+                "damage",
+                "healing"
+            ],
+            "skillKey": ""
         },
         "skill": {
-            "dtype": "1",
-            "dnum": "4",
+            "dtype": "4",
+            "dnum": "1",
             "modifiers": {
                 "str": true,
                 "dex": false,
                 "int": false,
                 "wis": false,
                 "con": false,
-                "soul": false
-            }
+                "soul": false,
+                "total": 0
+            },
+            "key": ""
         }
     }
 }

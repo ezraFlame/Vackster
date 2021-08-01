@@ -9,17 +9,8 @@ export default class VacksterItemSheet extends ItemSheet {
         });
     }
 
-    dragDrop = new DragDrop({
-        dragSelector: ".item",
-        dropSelector: null,
-        permissions: { dragstart: this._canDragStart.bind(this), drop: this._canDragDrop.bind(this) },
-        callbacks: { dragstart: this._onDragStart.bind(this), drop: this._onDrop.bind(this) }
-    });
-
     activateListeners(html) {
-        if (this.item.type != "action") {
-            this.dragDrop.bind(html.find(".actions").get(0));
-        }
+        this.form.ondrop = ev => this._onDrop(ev);
 
         html.find(".item-delete").click(this._onItemDelete.bind(this));
 
@@ -46,30 +37,26 @@ export default class VacksterItemSheet extends ItemSheet {
         return data;
     }
 
-    _canDragStart(selector) {
-        return true;
-    }
-
-    _canDragDrop(selector) {
-        return true;
-    }
-    
-    _onDragStart(event) {
-    }
-
     async _onDrop(event) {
         super._onDrop(event);
         let data = JSON.parse(event.dataTransfer.getData('text/plain'));
-
         let item = await Item.fromDropData(data);
 
-        return this._addAction(item);
+        console.log(item);
+
+        if (this.item.type == "weapon") {
+            return this._addAction(item);
+        } else if (this.item.type == "action" && item.type == "skill") {
+            let skillKey = item.data.data.key;
+            this.item.update({"data.skillKey": skillKey});
+            console.log(this.item.data.data.skillKey);
+            return;
+        }
     }
 
     async _addAction(item) {
-        let itemData = duplicate(this.item.data);
-        itemData.data.actions.push(item);
-        console.log(this.item);
-        return this.item.update(itemData);
+        let actions = this.item.data.data.actions;
+        actions.push(item);
+        return this.item.update({"data.actions": actions});
     }
 }

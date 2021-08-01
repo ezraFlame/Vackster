@@ -16,6 +16,7 @@ Hooks.once("init", function() {
     console.log("vackster | Initializing VacksterRPG Game System!");
 
     CONFIG.Vackster = Vackster;
+    CONFIG.Item.documentClass = VacksterItem;
 
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("Vackster", VacksterItemSheet, { makeDefault: true });

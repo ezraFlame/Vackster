@@ -13,7 +13,7 @@
             <tr>
                 <td>
                     <select name="data.attackStat">
-                        {{#select data.attackStat}}
+                        {{#select data.data.attackStat}}
                         {{#each config.attackTypes as |name type|}}
                         <option value="{{type}}">{{name}}</option>
                         {{/each}}
@@ -30,7 +30,7 @@
         </table>
         <div class="actions">
             <h2>Actions</h2>
-            {{#each data.actions}}
+            {{#each data.data.actions}}
             <div class="item" data-item-id="{{this._id}}">
                 <p>{{this.name}} | {{this.data.type}}</p>
                 <a class="item-delete"><i class="fas fa-trash"></i></a>
